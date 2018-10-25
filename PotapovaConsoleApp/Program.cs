@@ -10,6 +10,8 @@ namespace PotapovaConsoleApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("хело ворлд");
+            Console.ReadKey();
         }
     }
 }
