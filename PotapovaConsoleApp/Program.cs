@@ -28,6 +28,8 @@ namespace PotapovaConsoleApp
             {
                 Console.WriteLine("выберите операцию + - / *");
                 string str = Console.ReadLine();
+                if ((str !="+") || (str != "*") || (str != "/")||(str != "-"))
+                { Console.WriteLine("Неверно выбрана операция"); break; };
                 Console.WriteLine("введите первый аргумент");
                 string arg1 = Console.ReadLine();
                 int a1 = int.Parse(arg1);
