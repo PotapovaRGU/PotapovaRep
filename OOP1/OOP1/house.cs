@@ -11,7 +11,10 @@ namespace OOP1
         public bool area;      
         public int length;
         public int width;
+        public House(string x):base(x)
+        {
 
+        }
 
         public int Propertysquare
         {

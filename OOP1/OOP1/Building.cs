@@ -11,11 +11,10 @@ namespace OOP1
         
         public int square;
         public string material;
-        private readonly string owner;
-        public Building(string owner )
+        public readonly string owner;
+        public Building(string x)
         {
-            this.owner= owner
-
+            owner = x;
         }
 
         public string GetBuildingOwner()

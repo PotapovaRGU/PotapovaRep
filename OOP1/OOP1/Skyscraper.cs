@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP1
 {
-    class Skyscraper : Building
+    internal class Skyscraper : Building
     {
         public int hight;
         public int length;
@@ -14,6 +14,10 @@ namespace OOP1
         public int YearofBuild;
         private string City;
 
+        public Skyscraper(string x) : base(x)
+        {
+
+        }
         public bool PodSnos()
         {
             if (YearofBuild < 1855)
