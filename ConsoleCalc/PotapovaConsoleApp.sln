@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotapovaConsoleApp", "PotapovaConsoleApp\PotapovaConsoleApp.csproj", "{AF00F4D5-8B7E-493A-AE5E-F2E38835F898}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{D9014987-2646-45B9-BB4F-546EE05990CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AF00F4D5-8B7E-493A-AE5E-F2E38835F898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF00F4D5-8B7E-493A-AE5E-F2E38835F898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF00F4D5-8B7E-493A-AE5E-F2E38835F898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9014987-2646-45B9-BB4F-546EE05990CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9014987-2646-45B9-BB4F-546EE05990CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9014987-2646-45B9-BB4F-546EE05990CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9014987-2646-45B9-BB4F-546EE05990CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
