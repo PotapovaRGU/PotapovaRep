@@ -41,6 +41,22 @@ namespace OOP1
             {
                 Console.WriteLine("Площадь строения build3 равна {0}", build3.Propertysquare);
             }
+
+            List<Building> buildings = new List<Building>();
+            buildings.Add(build1);
+            buildings.Add(build2);
+            buildings.Add(build3);
+            buildings.Count();
+            Console.WriteLine("Количество элементов в коллекции {0}",buildings.Count());
+
+            var sortedBuildings = from b in buildings
+                              orderby b.owner
+                              select b;
+
+            foreach (Building b in sortedBuildings)
+                Console.WriteLine(b.owner);
+
+
             Console.Read();
 
         }
