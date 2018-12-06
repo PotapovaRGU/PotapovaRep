@@ -56,6 +56,13 @@ namespace OOP1
             foreach (Building b in sortedBuildings)
                 Console.WriteLine(b.owner);
 
+            buildings.Add(build3);
+            buildings.Add(new House("newownername"));
+
+            var sortedBuildings2 = buildings.OrderByDescending((b) => b.owner);
+
+            foreach (Building b in sortedBuildings2)
+                Console.WriteLine(b.owner+ " Descending");
 
             Console.Read();
 
