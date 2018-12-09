@@ -1,13 +1,13 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP1
 {
     class Program
-    {
+    { 
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
             House build1 = new House("Vasia");
@@ -16,8 +16,21 @@ namespace OOP1
             build1.length = 12;
             build1.area = true;
             int Sq;
-            Sq = build1.Propertysquare;
-            Console.WriteLine("Площадь участка build1 равна {0}, влвделец {1}", Sq, build1.owner);
+            try
+            {
+                Sq = build1.Propertysquare;               
+                Console.WriteLine("Площадь участка build1 равна {0}, влвделец {1}", Sq, build1.owner);
+                throw new Exception("Здесь сообщение об ошибке");
+                
+            }
+            catch(Exception ex)
+            {
+                logger.Debug("Обнаружена ошибка {0}", ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Это выполняется все равно");
+            }
 
 
             House build2 = new House("Peter");
@@ -54,7 +67,10 @@ namespace OOP1
                               select b;
 
             foreach (Building b in sortedBuildings)
-                Console.WriteLine(b.owner);
+            {
+                Console.WriteLine(b.GetBuildingOwner());
+            }
+          
 
             buildings.Add(build3);
             buildings.Add(new House("newownername"));
@@ -62,7 +78,7 @@ namespace OOP1
             var sortedBuildings2 = buildings.OrderByDescending((b) => b.owner);
 
             foreach (Building b in sortedBuildings2)
-                Console.WriteLine(b.owner+ " Descending");
+                Console.WriteLine(b.GetBuildingOwner()+ " Descending");
 
             Console.Read();
 

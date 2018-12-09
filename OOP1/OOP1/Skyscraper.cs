@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP1
 {
+    [MyOwn(Architect = "ArchitectorSkyscraper")]
     internal class Skyscraper : Building
     {
         public int hight;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP1
 {
+    [MyOwn(Architect= "Architector1")]
     abstract class Building
     {
         
@@ -19,7 +20,9 @@ namespace OOP1
 
         public string GetBuildingOwner()
         {
-            return owner;
+            var type = this.GetType();
+            var attributeValue = Attribute.GetCustomAttribute(type, typeof(MyOwnAttribute)) as MyOwnAttribute; 
+            return owner + " - "+ attributeValue.Architect;
         }
 
 

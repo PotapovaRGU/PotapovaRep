@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP1
 {
+    [MyOwn(Architect = "ArchitectorHouse")]
     class House : Building
     {
         public bool area;      
